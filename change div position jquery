@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+
+div1 = $('#div1');
+div2 = $('#div2');
+
+tdiv1 = div1.clone();
+tdiv2 = div2.clone();
+
+if(!div2.is(':empty')){
+    div1.replaceWith(tdiv2);
+    div2.replaceWith(tdiv1);
+    
+    tdiv1.addClass("replaced");
+}
+
+});
+</script>
+</head>
+
+<body>
+<div id="div1">STUFF ONE</div>
+<br/>
+<div id="div2">STUFF TWO</div>
+</body>
+</html>
